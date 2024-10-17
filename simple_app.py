@@ -51,6 +51,7 @@ class Account:
         self.savings = savings
         self.transactions = {}
         self.conn = get_db_connection()
+        
     
     def generate_unique_tag(self, length=5):
         letters_and_digits = string.ascii_letters + string.digits
@@ -134,3 +135,7 @@ if __name__ == "__main__":
     
     # Saving changes to the account after transactions
     edoardo.save_account()
+
+
+    riccardo = SavingsAccount('RT01','user_02',120)
+    riccardo.save_account()
